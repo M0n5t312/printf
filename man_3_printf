@@ -1,0 +1,37 @@
+NAME
+        _printf
+
+SYNOPSIS
+        #include "holberton.h"
+
+        int printf(const char *format, ...);
+DESCRIPTION
+	The function write the output under the control of a format
+        string that specifies how subsequent arguments (or  arguments  accessed
+        via the variable-length argument facilities of stdarg(3)) are converted
+        for output.
+
+	 Conversion specifiers
+	 	    A character that specifies the type of conversion to be
+		    applied. The conversion specifiers and their meanings are:
+
+		    d, i   The  int  argument is converted to signed decimal
+		       	   notation. The precision, if any, gives the minimum
+			   number of digits that  must appear; if the converted
+			   value  requires fewer digits,it is padded on the left
+			   with zeros.   The  default  precision  is  1. When  0
+			   is  printed with an explicit precision 0, the output
+			   is empty.
+
+		    s	   Writes a string of characters from the array and are
+		    	   written up to (but not including)  a  terminating
+			   null  byte ('\0');
+
+		    c	   Writes a single character on std output.
+		    
+		    %      A  '%' is written.  No argument is converted. The
+		    	   complete conversion specification is '%%'.
+
+RETURN VALUE
+       Upon successful return, these functions return the number of characters
+       printed (excluding the null byte used to end output to strings).
